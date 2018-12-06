@@ -1,0 +1,14 @@
+@model IEnumerable<Curso>
+
+@{
+    ViewData["Title"] = "Informacion Curso";
+}
+<h1>@ViewData["Title"]</h1
+
+<strong>Desde la vista partial</strong>
+@foreach (var curso in Model)
+{
+    <partial name="ObjetoEscuelaSimple" mode= "curso"/>
+}
+
+<p><i>@ViewBag.Fecha</i></p>
